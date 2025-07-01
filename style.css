@@ -26,9 +26,18 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
   line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
 }
 
-.greetings > span {
+.greetings div {
+  display: flex;
+  justify-content: center;
+  gap: 0.05em;
+}
+
+.greetings span {
   display: inline-block;
   animation: glow 3.5s ease-in-out infinite;
 }
@@ -44,7 +53,7 @@ body {
   }
 }
 
-/* Delay untuk efek glow berurutan */
+/* Delay animasi glow: urut dari H sampai K (total 10 huruf) */
 .greetings span:nth-of-type(1) { animation-delay: 0s; }
 .greetings span:nth-of-type(2) { animation-delay: 0.2s; }
 .greetings span:nth-of-type(3) { animation-delay: 0.4s; }
